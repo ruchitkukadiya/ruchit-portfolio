@@ -1,0 +1,335 @@
+/* Base Page Styles */
+.page { 
+  min-height: 100vh; 
+  background: var(--bg-main); 
+  padding: 4rem 3.5rem; 
+}
+
+@media (max-width: 900px) { 
+  .page { padding: 5.5rem 1.5rem 3rem; } 
+}
+
+@media (max-width: 480px) { 
+  .page { padding: 5rem 1.2rem 2rem; } 
+}
+
+.inner { max-width: 1100px; }
+
+.sectionLabel { 
+  font-size: 0.75rem; 
+  letter-spacing: 0.2em; 
+  color: var(--accent); 
+  margin-bottom: 0.5rem; 
+}
+
+.heading { 
+  font-family: var(--font-heading); 
+  font-size: clamp(2rem, 4vw, 3.2rem); 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  margin-bottom: 2rem; 
+}
+
+.accent { color: var(--accent); }
+
+/* Section Styling */
+.section { margin-bottom: 2.5rem; }
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  color: var(--text-primary);
+}
+
+.titleLine {
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  display: block;
+}
+
+/* Grid Layouts - Different sizes for different sections */
+
+/* Core Stack Grid - Larger tiles, responsive */
+.coreGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .coreGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .coreGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Medium Grid - AI Tools & Engineering Tools */
+.mediumGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .mediumGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mediumGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tech Card Base Styles */
+.techCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Size Variants */
+.techCard.large {
+  padding: 1.4rem 1rem;
+}
+
+.techCard.medium {
+  padding: 1.1rem 0.8rem;
+}
+
+/* Scroll Reveal Animation */
+.fadeIn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fadeIn.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glow Effect Background */
+.techCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, var(--accent-glow), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+/* Hover States - Professional Micro-interactions */
+.techCard:hover {
+  border-color: var(--accent);
+  transform: scale(1.05);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.4),
+    0 0 0 1px var(--accent),
+    0 0 20px rgba(var(--accent-rgb, 255, 255, 255), 0.3);
+}
+
+.techCard:hover::before {
+  opacity: 0.15;
+}
+
+/* Icon Styles */
+.techIcon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.techCard.medium .techIcon {
+  width: 42px;
+  height: 42px;
+}
+
+.techIcon svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  transition: filter 0.35s ease;
+}
+
+.techCard:hover .techIcon {
+  transform: scale(1.08);
+}
+
+.techCard:hover .techIcon svg {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+/* Emoji Icons (for tools without SVG) */
+.toolIcon {
+  font-size: 2.2rem;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.techCard.medium .toolIcon {
+  font-size: 1.8rem;
+}
+
+.techCard:hover .toolIcon {
+  transform: scale(1.08);
+}
+
+/* Tech Name Label */
+.techName {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.02em;
+  transition: color 0.35s ease;
+}
+
+.techCard.medium .techName {
+  font-size: 0.75rem;
+}
+
+.techCard:hover .techName {
+  color: var(--accent);
+}
+
+/* Familiar With Section - Pills */
+.extraSection { 
+  margin-top: 2rem; 
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.extraLabel { 
+  font-size: 0.75rem; 
+  letter-spacing: 0.12em; 
+  color: var(--text-dim); 
+  text-transform: uppercase; 
+  margin-bottom: 0.8rem; 
+  font-weight: 600;
+}
+
+.pillGrid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .pillGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .pillGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.6rem 0.7rem;
+  border-radius: 12px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.pill:hover { 
+  border-color: var(--accent); 
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pill:hover .pillName {
+  color: var(--accent);
+}
+
+.pillIcon {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  transition: transform 0.25s ease;
+}
+
+.pill:hover .pillIcon {
+  transform: scale(1.1);
+}
+
+.pillName {
+  font-size: 0.7rem;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .techCard,
+  .techIcon,
+  .toolIcon,
+  .techName,
+  .pill,
+  .fadeIn {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .techCard:hover {
+    transform: none;
+  }
+
+  .techCard:hover .techIcon,
+  .techCard:hover .toolIcon {
+    transform: none;
+  }
+
+  .pill:hover {
+    transform: none;
+  }
+
+  .fadeIn {
+    opacity: 1;
+    transform: none;
+  }
+}
