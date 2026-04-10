@@ -78,7 +78,7 @@ export default function Home({ onNavigate }) {
             </button>
             <button
               className={styles.btnSecondary}
-              onClick={() => onNavigate('resume')}
+              onClick={() => window.open('https://drive.google.com/file/d/1ZRWAOVy9nmh97oo6TknNJslHUDUaZ6ME/view?usp=sharing', '_blank')}
             >
               Download Resume
             </button>

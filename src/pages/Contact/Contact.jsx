@@ -2,16 +2,16 @@ import { useState } from 'react'
 import styles from './Contact.module.css'
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
-  const [sent, setSent] = useState(false)
+  // const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
+  // const [sent, setSent] = useState(false)
 
-  const handleChange = (e) => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
+  // const handleChange = (e) => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setSent(true)
-    setTimeout(() => { setSent(false); setForm({ name: '', email: '', subject: '', message: '' }) }, 4000)
-  }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   setSent(true)
+  //   setTimeout(() => { setSent(false); setForm({ name: '', email: '', subject: '', message: '' }) }, 4000)
+  // }
 
   return (
     <div className={styles.page}>
@@ -23,7 +23,8 @@ export default function Contact() {
           {/* Left info */}
           <div className={styles.info}>
             <p className={styles.infoText}>
-              Have a project in mind, want to collaborate, or just want to say hi? I'd love to hear from you.
+              Open to full-time roles, freelance projects, or collaboration.
+              Let’s build scalable and impactful products together.
             </p>
 
             {[
@@ -43,7 +44,7 @@ export default function Contact() {
             <div className={styles.socials}>
               <a href="https://github.com/ruchitkukadiya" target="_blank" rel="noreferrer" className={styles.socialBtn}>GitHub</a>
               <a href="https://in.linkedin.com/in/ruchit-kukadiya" target="_blank" rel="noreferrer" className={styles.socialBtn}>LinkedIn</a>
-              <a href="mailto:ruchitkukadiya111@gmail.com" target="_blank" rel="noreferrer" className={styles.socialBtn}>Email</a>
+              <a href="https://drive.google.com/file/d/1ZRWAOVy9nmh97oo6TknNJslHUDUaZ6ME/view?usp=sharing" target="_blank" rel="noreferrer" className={styles.socialBtn}>Resume/CV</a>
             </div>
           </div>
 
