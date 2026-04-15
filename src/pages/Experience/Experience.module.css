@@ -317,6 +317,11 @@
 
 .companyName {
   color: var(--accent);
+  text-decoration: none;
+}
+
+.companyName:hover {
+  text-decoration: underline;
 }
 
 .location {
@@ -475,6 +480,7 @@
   padding: 0.2rem 0.7rem;
   border-radius: 50px;
   transition: all 0.15s;
+  cursor: pointer;
 }
 
 .techTag:hover {

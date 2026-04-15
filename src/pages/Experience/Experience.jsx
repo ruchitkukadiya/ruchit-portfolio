@@ -5,25 +5,25 @@ const EXPERIENCES = [
   {
     role: 'Software Engineer (Full Stack)',
     company: 'Bacancy Technology',
-    logo: 'https://via.placeholder.com/40/f59e0b/000?text=B',
+    companyUrl: 'https://www.bacancytechnology.com/',
     location: 'Ahmedabad, Gujarat, India',
     period: 'March 2025 — Present',
     type: 'Full-time',
-    impactSummary: 'Leading enterprise full-stack development with cloud architecture, performance optimization, and team mentorship.',
-    metrics: [
-      { label: 'Projects Delivered', value: '8+' },
-      { label: 'Team Size', value: '12' },
-    ],
+    // metrics: [
+    //   { label: 'Projects Delivered', value: '8+' },
+    //   { label: 'Team Size', value: '12' },
+    // ],
     points: [
-      'Architected cloud-native applications on AWS handling 100K+ concurrent users',
-      'Reduced deployment time by 60% through CI/CD pipeline automation',
-      'Mentored 5 developers, improving team velocity by 35%',
-      'Achieved 85% code coverage with comprehensive testing strategy',
+      'Developed scalable full-stack features using React.js, TypeScript, and Node.js for project management and social aggregation platforms.',
+      'Implemented end-to-end workflows including lead management, CRM, cost estimation, and e-signature-based contract systems.',
+      'Built real-time features using Socket.io for live notifications and improved user interaction.',
+      'Created custom DOM parsing and data extraction mechanisms to aggregate multimedia content from multiple social platforms.',
+      'Ensured application security with role-based authentication, API integrations, and dynamic PDF generation for business workflows.',
     ],
     techStack: {
       frontend: ['React', 'Next.js', 'TypeScript'],
-      backend: ['Node.js', 'Docker'],
-      database: ['PostgreSQL'],
+      backend: ['Node.js','ExpressJS', 'Nest.js','Docker'],
+      database: ["MySQL",'PostgreSQL'],
       cloud: ['AWS'],
     },
     achievements: [
@@ -31,33 +31,32 @@ const EXPERIENCES = [
         title: 'Team of the Quarter - Q4 2025',
         company: 'Bacancy Technology',
         period: 'Q4 2025',
-        image: 'https://via.placeholder.com/800x600/1a1a1a/f59e0b?text=Team+of+the+Quarter+Certificate',
-        externalUrl: 'https://example.com/certificate-verify',
+        externalUrl: 'https://drive.google.com/file/d/1MkqCRK7i1iBT6opbn0p5fVYbt080rmw5/view?usp=sharing',
       },
     ],
   },
   {
     role: 'Software Engineer Level 2',
     company: 'OneClick IT Consultancy P Limited',
-    logo: 'https://via.placeholder.com/40/f59e0b/000?text=O',
+    companyUrl: 'https://www.oneclickitsolution.com/',
     location: 'Ahmedabad, Gujarat, India',
     period: 'August 2024 — March 2025',
     type: 'Full-time',
-    impactSummary: 'Drove performance optimization and real-time feature development across high-traffic applications.',
-    metrics: [
-      { label: 'Load Time', value: '-40%' },
-      { label: 'Users', value: '50K+' },
-    ],
+    // metrics: [
+    //   { label: 'Load Time', value: '-40%' },
+    //   { label: 'Users', value: '50K+' },
+    // ],
     points: [
-      'Reduced initial load time from 4.2s to 2.5s with code splitting and lazy loading',
-      'Built WebSocket/WebRTC features serving 50K+ daily active users',
-      'Integrated payment gateways processing $2M+ monthly with 99.9% uptime',
-      'Improved Lighthouse score from 65 to 92 through legacy code refactoring',
+      'Developed a modern travel booking platform with flight search and crypto payment integration using React, Next.js, and TypeScript.',
+      'Built responsive and SEO-friendly UI with Next.js, optimizing performance and user experience for large-scale applications.',
+      'Designed and implemented admin panel features including user authentication, role management, and CRUD operations for master data.',
+      'Integrated real-time functionalities like live location tracking and call management using Socket.IO and Google Maps API.',
+      'Collaborated on backend integration with .NET services to handle booking workflows, approvals, and seamless data communication.',
     ],
     techStack: {
       frontend: ['React', 'Next.js'],
-      backend: ['Node.js', 'NestJS', 'WebRTC'],
-      database: ['PostgreSQL', 'Redis'],
+      backend: ['Node.js', 'ExpressJS', 'WebRTC', "CI/CD", ".Net"],
+      database: ['MySQL'],
       cloud: [],
     },
     achievements: [
@@ -65,33 +64,33 @@ const EXPERIENCES = [
         title: 'Employee of the Quarter - Q1 2025',
         company: 'OneClick IT Consultancy P Limited',
         period: 'Q1 2025',
-        image: 'https://via.placeholder.com/800x600/1a1a1a/f59e0b?text=Employee+of+the+Quarter+Certificate',
+        image: 'https://drive.google.com/file/d/1Pk8QnS4Wt4lBXs5f-8qaz-z4SoR_KIhA/view?usp=sharing',
       },
     ],
   },
   {
     role: 'MERN Stack Developer',
     company: 'Karmaleen Technology Pvt. Ltd.',
-    logo: 'https://via.placeholder.com/40/f59e0b/000?text=K',
+    companyUrl: 'https://karmaleen.com',
     location: 'Ahmedabad, Gujarat, India',
     period: 'January 2022 — August 2024',
     type: 'Full-time',
-    impactSummary: 'Built production-ready full-stack applications serving thousands across e-commerce and social platforms.',
-    metrics: [
-      { label: 'Users Served', value: '25K+' },
-      { label: 'Daily Requests', value: '1M+' },
-    ],
+    // metrics: [
+    //   { label: 'Users Served', value: '25K+' },
+    //   { label: 'Daily Requests', value: '1M+' },
+    // ],
     points: [
-      'Developed RESTful APIs handling 1M+ daily requests with OAuth 2.0/JWT',
-      'Built e-commerce platform processing 500+ orders daily',
-      'Reduced deployment cycle from 2 hours to 15 minutes via CI/CD',
-      'Achieved 95% on-time delivery across cross-functional projects',
+      'Developed high-performance frontend modules for an AdOps platform using Angular and AgGrid, enabling efficient data visualization and advertising optimization.',
+      'Built scalable and interactive UI components for an AI-powered chatbot, integrating real-time communication using Socket.io and GraphQL APIs.',
+      'Implemented features for automated customer support, lead generation, and personalized user interactions to enhance engagement.',
+      'Engineered real-time chat and AR-based support interfaces, improving troubleshooting efficiency and reducing operational overhead.',
+      'Collaborated with backend teams using Node.js/NestJS and MongoDB to ensure seamless API integration, state management, and data handling.',
     ],
     techStack: {
-      frontend: ['React'],
-      backend: ['Node.js', 'Express', 'Socket.io', 'Stripe'],
-      database: ['MongoDB'],
-      cloud: ['AWS'],
+      frontend: ['Angular' ,'React'],
+      backend: ['Node.js', 'Express', 'Socket.io', 'ExpressJS', "NestJS"],
+      database: ['MySQL','MongoDB'],
+      cloud: ['AWS', 'Azure'],
     },
     achievements: [],
   },
@@ -191,25 +190,9 @@ export default function Experience() {
                 <div className={styles.cardTop}>
                   <div>
                     <div className={styles.roleHeader}>
-                      {exp.logo && (
-                        <img 
-                          src={exp.logo} 
-                          alt={`${exp.company} logo`}
-                          className={styles.companyLogo}
-                          onError={(e) => {
-                            e.target.style.display = 'none'
-                            e.target.nextSibling.style.display = 'flex'
-                          }}
-                        />
-                      )}
-                      {exp.logo && (
-                        <div className={styles.logoFallback}>
-                          {exp.company.charAt(0)}
-                        </div>
-                      )}
                       <div className={styles.roleInfo}>
                         <div className={styles.roleTitle}>
-                          {exp.role} <span className={styles.at}>@</span> <span className={styles.companyName}>{exp.company}</span>
+                          {exp.role} <span className={styles.at}>@</span> <a href={exp.companyUrl} target="_blank" rel="noopener noreferrer" className={styles.companyName}>{exp.company}</a>
                         </div>
                       </div>
                     </div>
@@ -226,13 +209,8 @@ export default function Experience() {
                   </div>
                 </div>
                 
-                {/* Impact Summary */}
-                {exp.impactSummary && (
-                  <p className={styles.impactSummary}>{exp.impactSummary}</p>
-                )}
-                
                 {/* Impact Metrics */}
-                {exp.metrics && exp.metrics.length > 0 && (
+                {/* {exp.metrics && exp.metrics.length > 0 && (
                   <div className={styles.metricsGrid}>
                     {exp.metrics.map((metric, k) => (
                       <div key={k} className={styles.metricItem}>
@@ -241,7 +219,7 @@ export default function Experience() {
                       </div>
                     ))}
                   </div>
-                )}
+                )} */}
                 
                 {/* Key Contributions */}
                 <div className={styles.contributionsLabel}>Key Contributions</div>

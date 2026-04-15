@@ -60,7 +60,7 @@
 /* Core Stack Grid - Larger tiles, responsive */
 .coreGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   gap: 0.8rem;
 }
 
@@ -80,7 +80,7 @@
 /* Medium Grid - AI Tools & Engineering Tools */
 .mediumGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
   gap: 0.7rem;
 }
 
